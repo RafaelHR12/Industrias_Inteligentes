@@ -55,59 +55,59 @@ public class LinhaProducao {
 			System.out.println("ID: " + maquina.getIdMaquina() + " - Tipo: " + maquina.getTipoMaquina());
 		}
 	}
-	
-	 private boolean producaoIniciada;
 
-	    public void GerenciarProducao() {
-	        this.producaoIniciada = false;
-	    }
+	private boolean producaoIniciada;
 
-	    public boolean isProducaoIniciada() {
-	        return producaoIniciada;
-	    }
+	public void GerenciarProducao() {
+		this.producaoIniciada = false;
+	}
 
-	    public void setProducaoIniciada(boolean producaoIniciada) {
-	        this.producaoIniciada = producaoIniciada;
-	    }
+	public boolean isProducaoIniciada() {
+		return producaoIniciada;
+	}
 
-	    public void iniciarProducao() {
-	        setProducaoIniciada(true);
-	        System.out.println("Produção iniciada!");
-	    }
+	public void setProducaoIniciada(boolean producaoIniciada) {
+		this.producaoIniciada = producaoIniciada;
+	}
 
-	    public void pararProducao() {
-	        setProducaoIniciada(false);
-	        System.out.println("Produção parada!");
-	    }
+	public void iniciarProducao() {
+		setProducaoIniciada(true);
+		System.out.println("Produção iniciada!");
+	}
 
-	    public void congelarProducao() {
-	        System.out.println("Produção congelada!");
-	    }
+	public void pararProducao() {
+		setProducaoIniciada(false);
+		System.out.println("Produção parada!");
+	}
 
-	    public void menuInteracao() {
-	        Scanner scanner = new Scanner(System.in);
-	        System.out.println("Menu de interação:");
-	        System.out.println("1. Iniciar produção");
-	        System.out.println("2. Parar produção");
-	        System.out.println("3. Congelar produção");
-	        System.out.print("Digite 1, 2 ou 3 para escolher a ação: ");
-	        int opcao = scanner.nextInt();
+	public void congelarProducao() {
+		System.out.println("Produção congelada!");
+	}
 
-	        switch (opcao) {
-	            case 1:
-	                iniciarProducao();
-	                break;
-	            case 2:
-	                pararProducao();
-	                break;
-	            case 3:
-	                congelarProducao();
-	                break;
-	            default:
-	                System.out.println("Opção inválida!");
-	        }
+	public void menuInteracao() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Menu de interação:");
+		System.out.println("1. Iniciar produção");
+		System.out.println("2. Parar produção");
+		System.out.println("3. Congelar produção");
+		System.out.print("Digite 1, 2 ou 3 para escolher a ação: ");
+		int opcao = scanner.nextInt();
 
-	        scanner.close();
-	    }
+		switch (opcao) {
+		case 1:
+			iniciarProducao();
+			break;
+		case 2:
+			pararProducao();
+			break;
+		case 3:
+			congelarProducao();
+			break;
+		default:
+			System.out.println("Opção inválida!");
+		}
+
+		scanner.close();
+	}
 
 }

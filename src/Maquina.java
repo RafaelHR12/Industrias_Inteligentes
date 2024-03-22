@@ -76,7 +76,6 @@ public class Maquina {
 			this.taxaProdutividade = (tempoAtividade / 20) * 100;
 	}
 
-	// Funções
 	public String definirTaxaProdutividade(double taxaProdutividade) {
 		if (taxaProdutividade >= 75 && taxaProdutividade <= 100) {
 			return "A taxa de produtividade da máquina " + idMaquina + " é ótima.";
